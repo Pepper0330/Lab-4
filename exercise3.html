@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab4 - Exercise 3</title>
+    </head>
+    <body>
+        <h1>JavaScript Lab</h1>
+        <script>
+            let classRoster = ["Alice", "Tom", "Charlie", "Diana", "Evan"];
+
+            console.log("1.4 Roster: " + classRoster.toString());
+            console.log("1.4 Roster: " + classRoster);
+
+            classRoster.push("Fiona");
+            classRoster.push("Nancy");
+
+            classRoster.shift();
+
+            console.log("1.7 Roster: " + classRoster);
+            console.log("1.8 Length: " + classRoster.length);
+
+            let classInfo = {
+                className: 'ENSF381: Full-Stack Web Development',
+                instructor: 'Dr. Smith',
+                students: classRoster,
+                details: {
+                    semester: 'Winter',
+                    year: 2025
+                }
+            }
+
+            classInfo.schedule = ['Monday', 'Wednesday', 'Friday'];
+
+            classInfo.instructor = 'Dr. Abdellatif';
+
+            console.log("2.4 className: " + classInfo.className + "\ninstructor: " + classInfo.instructor + "\nstudents: " + classInfo.students.join(", "));
+
+            console.log("2.5 semester: " + classInfo.details.semester);
+
+            console.log("2.6 classInfo" + classInfo);
+
+            let {className, students} = classInfo;
+            console.log("2.7 className" + className + "\n students: " + students);
+
+            let {semester, year} = classInfo.details;
+            console.log("2.8 Semester: " + semester + "\nyear: " + year);
+
+            let [student1, student2] = classInfo.students;
+            let remainingStudents = classInfo.students.slice(2);
+            console.log("2.11 student1: " + student1 + "\nstudent2: " + student2 + "\nremainingStudents: " + remainingStudents);
+        </script>
+    </body>
+</html>
