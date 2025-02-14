@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab4 - Exercise 2</title>
+</head>
+
+<body>
+    <h1>JavaScript Lab</h1>
+    <script>
+        // part 1
+        // let add = function(a,b){
+        //     return a+b;
+        // };
+        // let sub = function(a,b){
+        //     return a-b;
+        // }
+        //console.log(add(10, 3));
+        //connsole.log(subtract(0, -1));
+
+        // part 2
+        // let add = function(a,b=0){
+        //     return a+b;
+        // };
+        // let sub = function(a,b=0){
+        //     return a-b;
+        // }
+
+        // console.log(add(10));
+        // connsole.log(subtract(0));
+
+        // console.log(add(10, 3));
+        // connsole.log(subtract(0, -1));
+
+
+        // part 3
+        let add = (a,b=0) => a+b;
+        let subtract = (a, b=0) => a-b;
+        let mul = (a, b) => a*b;
+        let div = (a, b) => (b != 0)?(a/b):"error";
+
+        // console.log(add(10, 3));
+        // console.log(subtract(0, -1));
+        // console.log(mul(3, -3));
+        // console.log(div(10, 0));
+
+        // part 4
+        let calculator = (a, b, callback) => callback(a, b);
+
+        console.log(calculator(2, 3, add));
+        console.log(calculator(3, 4, mul));
+    </script>
+</body>
+
+</html>
